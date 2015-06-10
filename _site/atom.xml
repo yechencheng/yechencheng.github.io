@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jekyll Bootstrap</title>
+ <link href="http://username.github.io/atom.xml" rel="self"/>
+ <link href="http://username.github.io"/>
+ <updated>2015-06-10T00:19:13-04:00</updated>
+ <id>http://username.github.io</id>
+ <author>
+   <name>Name Lastname</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://username.github.io/2015/06/10/hello-world"/>
+   <updated>2015-06-10T00:00:00-04:00</updated>
+   <id>http://username.github.io/2015/06/10/hello-world</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ 
+</feed>

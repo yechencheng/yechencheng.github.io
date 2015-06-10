@@ -7,14 +7,13 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Test</title>
-				<description>&lt;h2 id=&quot;helloworld&quot;&gt;HelloWorld&lt;/h2&gt;
-
-&lt;h3 id=&quot;aaa&quot;&gt;AAA&lt;/h3&gt;
+				<title>LeetCode 1-3</title>
+				<description>&lt;h2 id=&quot;section&quot;&gt;1&lt;/h2&gt;
+&lt;p&gt;using map to record&lt;/p&gt;
 </description>
-				<pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
-				<link>/2015/06/test</link>
-				<guid isPermaLink="true">/2015/06/test</guid>
+				<pubDate>Wed, 10 Jun 2015 00:00:00 -0400</pubDate>
+				<link>/2015/06/LeetCode-1</link>
+				<guid isPermaLink="true">/2015/06/LeetCode-1</guid>
 			</item>
 		
 	</channel>

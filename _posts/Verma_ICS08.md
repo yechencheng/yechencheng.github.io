@@ -6,14 +6,14 @@ title: [Verma+:ICS08]Power-aware Dynamic Placement of HPC Applications
 The paper is motivated by a straightforward insight: the utility of servers of virtual machines varies, however, it is low in most time. Given such variability, dynamic placement would be useful.
 
 The authors validate the variability by showing it from 2 ways:
-1. the variability of the number of arriving jobs in 24 hours of a day as well as in a month. More jobs will be submitted in the middle of the day, which makes sense. At a further view, phases showed in periods in a month. In most of the day, only a few jobs(about 10) are running whiling a lot of(more than 200) jobs exists.
-2. the variability of resources utility in a month. It is observed in both CPU utilization and memory usage.
+1.  the variability of the number of arriving jobs in 24 hours of a day as well as in a month. More jobs will be submitted in the middle of the day, which makes sense. At a further view, phases showed in periods in a month. In most of the day, only a few jobs(about 10) are running whiling a lot of(more than 200) jobs exists.
+2.  the variability of resources utility in a month. It is observed in both CPU utilization and memory usage.
 
 Then the variability of power consuming is studied from 3 perspectives as well:
-1. The power consumption increases from 140 watts to 220W along with CPU utilization.
-2. Memory footprint doesn't necessarily impact the power
-3. However, memory access rate/throughput keeps the same pace with power. Higher throughput, higher power consumption.
+1.  The power consumption increases from 140 watts to 220W along with CPU utilization.
+2.  Memory footprint doesn't necessarily impact the power
+3.  However, memory access rate/throughput keeps the same pace with power. Higher throughput, higher power consumption.
 
 The applications characters are studied as well: Small memory background application on foreground running time doesn't impacted by cpu utilization, while large memory applicate does. More experiments verify that memory footprint is the main factor that impacts the running time.
 
-Based on the observations, the applications are classified into 3 categories base on their working set size comparing with the cache size: 1)fit into cache, 2)far larger than cache and 3)the others. The first class and second class applications are obviously should be packed together, respectively. The 3rd class can be packed with 1st class for performance or with 2nd class for power. 
+Based on the observations, the applications are classified into 3 categories base on their working set size comparing with the cache size: 1)fit into cache, 2)far larger than cache and 3)the others. The first class and second class applications are obviously should be packed together, respectively. The 3rd class can be packed with 1st class for performance or with 2nd class for power.

@@ -7,8 +7,12 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>\[Verma+:ICS08] Power-aware Dynamic Placement of HPC Applications</title>
-				<description>&lt;p&gt;The paper is motivated by a straightforward insight: the utility of servers of virtual machines varies, however, it is low in most time. Given such variability, dynamic placement would be useful.&lt;/p&gt;
+				<title>Verma+:ICS08 Power-aware Dynamic Placement of HPC Applications</title>
+				<description>&lt;script type=&quot;text/javascript&quot;
+    src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+&lt;/script&gt;
+
+&lt;p&gt;The paper is motivated by a straightforward insight: the utility of servers of virtual machines varies, however, it is low in most time. Given such variability, dynamic placement would be useful.&lt;/p&gt;
 
 &lt;p&gt;The authors validate the variability by showing it from 2 ways:&lt;/p&gt;
 
@@ -27,7 +31,7 @@
 
 &lt;p&gt;The applications characters are studied as well: Small memory background application on foreground running time doesn&amp;#39;t impacted by cpu utilization, while large memory applicate does. More experiments verify that &lt;strong&gt;memory footprint is the main factor that impacts the running time.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Based on the observations, the applications are classified into 3 categories base on their working set size comparing with the cache size: 1) fit into cache, 2) far larger than cache and 3) the others. The first class and second class applications are obviously should be packed together, respectively. The 3_rd class can be packed with 1st class for performance or with 2nd class for power.&lt;/p&gt;
+&lt;p&gt;Based on the observations, the applications are classified into 3 categories base on their working set size comparing with the cache size: 1) fit into cache, 2) far larger than cache and 3) the others. The first class and second class applications are obviously should be packed together, respectively. The  \(3_{rd}\) class can be packed with \(1_{st}\) class for performance or with \(2_{nd}\) class for power.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 02 Jan 2016 00:00:00 -0500</pubDate>
 				<link>/2016/01/Verma_ICS08</link>

@@ -1,44 +1,68 @@
-# Jekyll configuration
+# This is duplicated here from configs/mydoc/config_designers.yml so that Github Pages can read it. Github Pages requires this file for the build process. It can't read a configuration file stored in another location.
 
-name: My blog
-description: A jekyll theme
+# project definitions
+project: mydoc_designers
+audience: designers
+product: doc
+platform: all
+version: all
+output: web
+destination: ../doc_outputs/mydoc/designers
+topnav_title: Jekyll Documentation Theme
+homepage_title: Jekyll doc theme for designers
+site_title: Jekyll theme for designers
+project_folder: mydoc
+company_name: Your company
+footer_image_location: ../common_images/company_logo.png
+github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
+disqus_shortname: idrbwjekyll
+# variables
 
-# url is currently only used only for the RSS feed in feed.xml
-#url: http://scotte.github.io
+sidebar_tagline: Designers
+sidebar_version: Version 4.0
+theme_file: theme-blue.css
+pdf_file_name: mydoc_designers_pdf.pdf
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve -baseurl=''
-baseurl: ''
+port: 4009
 
-# This can be '' to hide the Github nav button
-#github: 'scotte/jekyll-clean'
+exclude:
+  - _site
+  - _drafts
+  - configs/
+  - doc/mydoc_writers*
 
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: ''
+# same for all
+host: 127.0.0.1
+feedback_email: tomjohnson1492@gmail.com
 
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: ''
-comments: true
-
-permalink: /:year/:month/:title
-paginate: 3
-
-
-#highlighter: pygments
-#markdown: kramdown
-highlighter: pygments
 markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
-exclude: ['README.md', 'LICENSE']
-
-github: [Repository metadata]
-safe: true
-lsi: false
-source: ./
 gems: [jekyll-paginate]
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+
+highlighter: pygments
+
+collections:
+  tooltips:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true
+

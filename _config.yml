@@ -41,3 +41,4 @@ github: [Repository metadata]
 safe: true
 lsi: false
 source: ./
+gems: [jekyll-paginate]

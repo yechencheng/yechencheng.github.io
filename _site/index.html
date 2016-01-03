@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My blog</title>
+    <title>CC's blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/jekyll-clean/js/jquery.min.js"></script>
     <script src="/jekyll-clean/js/bootstrap.min.js"></script>
@@ -23,18 +23,14 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-clean/">My blog</a>
+                <a class="navbar-brand" href="/jekyll-clean/">CC's blog</a>
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/jekyll-clean/">Home</a></li>
                     <li class="active visible-xs-block"><a href="/jekyll-clean/links.html">Links</a></li>
                     <li class="active"><a href="/jekyll-clean/archive.html">Archive</a></li>
-                    <li class="active"><a href="/jekyll-clean/about.html">About</a></li>
-                    <li class="active"><a href="/jekyll-clean/feed.xml">RSS</a></li>
-                    
-                      <li class="active"><a href="https://github.com/scotte/jekyll-clean">Github</a></li>
-                    
+                    <li class="active"><a href="/jekyll-clean/about.html">Contact</a></li>
                 </ul>
               </div>
         </div>
@@ -46,22 +42,18 @@
     <div class="row">
         <div class="col-md-3 hidden-xs">
             <div class="sidebar well">
-A jekyll theme
+A blog
 </div>
 
 <div class="sidebar well">
     <h1>Recent Posts</h1>
     <ul>
         
-          <li><a href="/jekyll-clean/2014/08/jekyll-clean-theme">Jekyll Clean Theme</a></li>
+          <li><a href="/jekyll-clean/2016/01/Verma_ICS08">Verma+:ICS08 Power-aware Dynamic Placement of HPC Applications</a></li>
         
-          <li><a href="/jekyll-clean/2014/07/Lorem-ipsum-dolor-sit-amet">Lorem ipsum dolor sit amet</a></li>
+          <li><a href="/jekyll-clean/2015/06/LeetCode-4">LeetCode 4</a></li>
         
-          <li><a href="/jekyll-clean/2014/06/Maecenas-feugiat-fringilla-nibh">Maecenas feugiat fringilla nibh</a></li>
-        
-          <li><a href="/jekyll-clean/2013/06/Cum-sociis-natoque-penatibus">Cum sociis natoque penatibus</a></li>
-        
-          <li><a href="/jekyll-clean/2013/05/Nulla-vel-risus-dapibus">Nulla vel risus dapibus</a></li>
+          <li><a href="/jekyll-clean/2015/06/LeetCode-1">LeetCode 1-3</a></li>
         
     </ul>
 </div>
@@ -82,119 +74,33 @@ A jekyll theme
             
 <div class="article">
     <div class="well">
-        <h1><a href="/jekyll-clean/2014/08/jekyll-clean-theme">Aug 22, 2014 - Jekyll Clean Theme</a></h1>
+        <h1><a href="/jekyll-clean/2016/01/Verma_ICS08">Jan 2, 2016 - Verma+:ICS08 Power-aware Dynamic Placement of HPC Applications</a></h1>
         
         <div class="content">
-            <ul>
-<li>Get it from <a href="https://github.com/scotte/jekyll-clean">github</a>.</li>
-<li>See the <a href="https://scotte.github.io/jekyll-clean">live demo</a>.</li>
-<li>See it <a href="https://scotte.github.io">in action on my own blog</a>.</li>
-</ul>
+            <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-<p>Welcome to the sample post for the Jekyll Clean theme.</p>
+<p>The paper is motivated by a straightforward insight: the utility of servers of virtual machines varies, however, it is low in most time. Given such variability, dynamic placement would be useful.</p>
 
-<p>A simple and clean Jekyll theme using <a href="http://getbootstrap.com">bootstrap</a>
-(not to be confused with jekyll-bootstrap) that&#39;s easy to modify and very
-modular in component and element reuse.</p>
+<p>The authors validate the variability by showing it from 2 ways:</p>
 
-<p>It uses Disqus for comments and includes Google Analytics support. Both of
-these features are disabled by default and can be enabled via _config.yml. You
-can also rip this code out of the templates if you like (footer.html and post.html).
-The beauty of Jekyll - keep things clean... Jekyll Clean!</p>
+<ol>
+<li> the variability of the number of arriving jobs in 24 hours of a day as well as in a month. More jobs will be submitted in the middle of the day, which makes sense. At a further view, phases showed in periods in a month. In most of the day, only a few jobs(about 10) are running whiling a lot of(more than 200) jobs exists.</li>
+<li> the variability of resources utility in a month. It is observed in both CPU utilization and memory usage.</li>
+</ol>
 
-<p>The theme works well on mobile phones, using a collapsable nav bar and hiding the
-sidebar. The links pane in the sidebar is available on mobile through the nav menu,
-and you can do the same thing for any other sections added to the sidebar.</p>
+<p>Then the variability of power consuming is studied from 3 perspectives as well:</p>
 
-<p>Don&#39;t forget to occassionally merge against my upstream repository so you can get
-the latest changes. Pull requests are encouraged and accepted!</p>
+<ol>
+<li> The power consumption increases from 140 watts to 220W along with CPU utilization.</li>
+<li> Memory footprint doesn&#39;t necessarily impact the power</li>
+<li> However, memory access rate/throughput keeps the same pace with power. <strong>Higher throughput, higher power consumption.</strong></li>
+</ol>
 
-<h1 id="installation">Installation</h1>
+<p>The applications characters are studied as well: Small memory background application on foreground running time doesn&#39;t impacted by cpu utilization, while large memory applicate does. More experiments verify that <strong>memory footprint is the main factor that impacts the running time.</strong></p>
 
-<p>If you don&#39;t have a blog already on github, start by cloning this repository.
-Best to do that directly on github and then clone that down to your computer.</p>
-
-<p>If you already do have a blog, You can certainly apply this theme to your existing
-blog in place, but then you won&#39;t be able to merge as the theme changes. If you
-re-apply your blog history on top of this theme&#39;s <strong>gh-pages</strong> branch, it&#39;s then
-easy to update to the latest version of the theme. You also don&#39;t want to have to
-deal with resolving old conflicts from your existing history, so you may wish to to
-push your existing master off to a new branch so you have the old history and start
-a new branch with this as the start, merging in your _posts and other assets (after
-git rm&#39;ing the current _posts.</p>
-
-<p>Not ideal, but you have to make a choice - either apply it manually or base your
-blog off this theme&#39;s branch. Either way it will work, and both have their own
-pros and cons.</p>
-
-<p>You can setup an upstream tracking repository like so:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ git remote add upstream git@github.com:scotte/jekyll-clean.git
-</code></pre></div>
-<p>And now when you wish to merge your own branch onto the latest version of the
-theme, simply do:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ git fetch upstream
-$ git merge upstream/gh-pages
-</code></pre></div>
-<p>Of course you will have to resolve conflicts for _config.yml, _includes/links-list.html,
-and _posts, and so on, but in practice this is pretty simple.</p>
-
-<p>This is how I maintain my own blog which is based on this theme. The old history is
-sitting in an <strong>old-master</strong> branch that I can refer to when I need to.</p>
-
-<h1 id="running-locally">Running Locally</h1>
-
-<p>Here&#39;s the exact set of packages I need to install on Debian to run jekyll
-locally with this theme for testing.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ sudo aptitude install ruby ruby-dev rubygems nodejs
-$ sudo gem install jekyll
-$ sudo gem install redcarpet
-$ sudo gem install pygments.rb
-$ sudo gem install jekyll-paginate
-</code></pre></div>
-<p>And then it&#39;s just a simple matter of running jekyll locally:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll serve
-</code></pre></div>
-<p>Now browse to <a href="http://127.0.0.1:4000/jekyll-clean/">http://127.0.0.1:4000/jekyll-clean/</a> (adjust per your <strong>baseurl</strong>
-in _config.yml).</p>
-
-<h1 id="disqus-comments">Disqus Comments</h1>
-
-<p>Getting Disqus to work can be a bit more work than it seems like it should be.
-Make sure your Disqus account is correctly configured with the right domain
-of your blog and you know your Disqus shortname.</p>
-
-<p>In _config.yml you&#39;ll need to set <strong>disqus</strong> to your Disqus shortname and
-make sure <strong>comments</strong> is true.</p>
-
-<p>Finally, in posts, make sure you have <strong>comments: true</strong> in the YAML front
-matter.</p>
-
-<p>More information on using Disqus with Jekyll is
-<a href="https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions">documented here</a>.</p>
-
-<h1 id="license">License</h1>
-
-<p>The content of this theme is distributed and licensed under a
-<img src="/jekyll-clean/images/cc_by_88x31.png" alt="License Badge">
-<a href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 License</a></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">This license lets others distribute, remix, tweak, and build upon your work,
-even commercially, as long as they credit you for the original creation. This
-is the most accommodating of licenses offered. Recommended for maximum
-dissemination and use of licensed materials.
-</code></pre></div>
-<p>In other words: you can do anything you want with this theme on any site, just please
-provide a link to <a href="https://github.com/scotte/jekyll-clean">the original theme on github</a>
-so I get credit for the original design. Beyond that, have at it!</p>
-
-<p>This theme includes the following files which are the properties of their
-respective owners:</p>
-
-<ul>
-<li>js/bootstrap.min.js - <a href="http://getbootstrap.com">bootstrap</a></li>
-<li>css/bootstrap.min.css - <a href="http://getbootstrap.com">bootstrap</a></li>
-<li>js/jquery.min.js - <a href="https://jquery.com">jquery</a></li>
-<li>images/cc_by_88x31.png - <a href="https://creativecommons.org">creative commons</a></li>
-</ul>
+<p>Based on the observations, the applications are classified into 3 categories base on their working set size comparing with the cache size: 1) fit into cache, 2) far larger than cache and 3) the others. The first class and second class applications are obviously should be packed together, respectively. The  \(3_{rd}\) class can be packed with \(1_{st}\) class for performance or with \(2_{nd}\) class for power.</p>
 
         </div>
     </div>
@@ -202,29 +108,217 @@ respective owners:</p>
 
 <div class="article">
     <div class="well">
-        <h1><a href="/jekyll-clean/2014/07/Lorem-ipsum-dolor-sit-amet">Jul 22, 2014 - Lorem ipsum dolor sit amet</a></h1>
+        <h1><a href="/jekyll-clean/2015/06/LeetCode-4">Jun 10, 2015 - LeetCode 4</a></h1>
         
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam metus, commodo sit amet ante a, finibus efficitur lorem. Maecenas egestas purus in tempor volutpat. Sed dapibus tortor nec sem suscipit ullamcorper. Nulla nec lorem lacus. Phasellus condimentum massa quis dolor consequat viverra ut ac magna. Ut a consequat nisi. Vivamus at leo ut turpis convallis lacinia. Curabitur eu placerat quam. Donec ultricies faucibus dui, a tincidunt lorem lobortis condimentum.</p>
+            <p>Binary search is powerful enough for this problem. But a bunch of things should be take good care of:</p>
 
-<p>Quisque aliquet consectetur justo sit amet convallis. Nunc vel aliquet ipsum, sit amet elementum justo. Vivamus id magna mi. Cras luctus est vel ipsum sagittis pellentesque. Vivamus ante elit, porttitor vitae quam quis, fermentum malesuada risus. Integer nec lectus vel lacus cursus tristique in euismod ipsum. Duis ut varius enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi et elit eu tortor lacinia sollicitudin non in lacus.</p>
+<ol>
+<li> m+n might be even, means the median number should be average to two median number</li>
+<li> one number may appear multiple times</li>
+</ol>
 
-<p>Integer at viverra turpis. Duis aliquam mattis sapien tempor eleifend. Mauris nec eleifend risus, quis mollis neque. Vivamus non dapibus justo, vel ornare magna. Nunc in nulla venenatis, imperdiet diam in, accumsan massa. Etiam congue augue ipsum, sit amet rutrum nisi blandit quis. Cras in lectus non lorem auctor consequat a vel sem. Aliquam erat volutpat. Fusce lobortis vel orci vitae ullamcorper. Phasellus id eleifend eros. Mauris vulputate, nisi vel auctor auctor, quam enim tincidunt felis, vitae fermentum odio tortor eget est. Integer ornare blandit lectus a accumsan.</p>
+<p>Followed trick can be placed to handle the two things respectively:</p>
 
+<ol>
+<li> if <em>m+n</em> is even, then we can add an infinite number to the end of any sequence, then we can find a median number <em>a</em>. Then take that infinite number and an other maximal number away, find an other median number <em>b</em>. <em>a</em> and <em>b</em> are the two median numbers. Then the only case we have to deal with is <em>n+m</em> is odd.</li>
+<li> use relax condition to verify median number, meaning, given sum of sequence length <em>x</em>, and a number <em>a</em>. When <em>x</em> is odd, if there are not more than <em>x/2</em> numbers less than <em>a</em> and not more than <em>x/2</em> numbers greater than <em>a</em>, then <em>a</em> is the median number.</li>
+<li> We can use binary search to find that <em>a</em></li>
+</ol>
+
+<p>Furthermore, if one do not care such much about execution time, then he can just neglect the first trick, use a <strong>double</strong> variable in binary search.</p>
+<div class="highlight"><pre><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums1</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="nf">GetLessThan</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums1</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">nums1</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">nums2</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums2</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">nums2</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+        <span class="n">n1</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n1</span><span class="p">);</span>
+        <span class="n">n2</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">GetGreaterThan</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">-</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums1</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">a</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">-</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">nums2</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums2</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">a</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="nf">GetMedian</span><span class="p">(){</span>
+        <span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">+</span> <span class="n">nums2</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int64_t</span> <span class="n">h</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">h</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="o">+</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">GetLessThan</span><span class="p">(</span><span class="n">mid</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">GetGreaterThan</span><span class="p">(</span><span class="n">mid</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">target</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="n">target</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">mid</span><span class="p">;</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">)</span>
+                <span class="n">h</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">double</span> <span class="nf">findMedianSortedArrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">_nums1</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">_nums2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">nums1</span> <span class="o">=</span> <span class="n">_nums1</span><span class="p">;</span>
+        <span class="n">nums2</span> <span class="o">=</span> <span class="n">_nums2</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">((</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">GetMedian</span><span class="p">();</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">nums1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">INT_MAX</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">rt</span> <span class="o">=</span> <span class="n">GetMedian</span><span class="p">();</span>
+            <span class="n">nums1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">n1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">nums2</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">n2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">nums1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">nums2</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">nums1</span><span class="p">.</span><span class="n">back</span><span class="p">())</span>
+                <span class="n">nums1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+            <span class="k">else</span>
+                <span class="n">nums2</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+
+            <span class="n">rt</span> <span class="o">+=</span> <span class="n">GetMedian</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">rt</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
         </div>
     </div>
 </div>
 
 <div class="article">
     <div class="well">
-        <h1><a href="/jekyll-clean/2014/06/Maecenas-feugiat-fringilla-nibh">Jun 22, 2014 - Maecenas feugiat fringilla nibh</a></h1>
+        <h1><a href="/jekyll-clean/2015/06/LeetCode-1">Jun 10, 2015 - LeetCode 1-3</a></h1>
         
         <div class="content">
-            <p>Maecenas feugiat fringilla nibh ut mattis. Sed non metus sit amet mi luctus feugiat in quis sem. Vivamus pulvinar commodo bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sapien nulla, eleifend in dolor et, rutrum maximus velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus malesuada egestas. Phasellus pulvinar vulputate urna in tempor. In vel sapien ullamcorper, condimentum ipsum ut, porttitor turpis. Nam auctor erat sed lectus tempus euismod. Nunc ipsum quam, condimentum ac bibendum sit amet, sodales nec metus.</p>
+            <h2 id="1">1</h2>
 
-<p>Vivamus a ullamcorper ipsum. Donec dictum eleifend massa, rhoncus consequat sem tempor nec. Ut bibendum luctus gravida. Nullam eleifend laoreet quam, nec tincidunt dolor tincidunt non. Aenean vel magna massa. Pellentesque sit amet tincidunt ante. Nulla posuere varius elit eu consequat. Sed vitae tortor scelerisque lacus eleifend condimentum. Nulla vitae neque sed lorem sagittis pretium eu nec est. Aliquam in euismod risus, vel vulputate orci.</p>
+<p>Using hash table to record each data and its index in O(NlogN). Then for each number <em>x</em>, find if <em>target-x</em> in the hash table.</p>
 
-<p>Praesent sit amet auctor justo. Suspendisse pretium rutrum vehicula. Cras ut porta urna. Morbi massa odio, eleifend vitae dictum eget, mattis nec metus. Praesent pellentesque metus eu massa pharetra facilisis. Suspendisse potenti. Vestibulum pellentesque pharetra tristique. Nam ut lobortis felis. Proin sit amet consequat ipsum. Curabitur et mattis justo, sit amet feugiat lectus. Sed eleifend eget arcu non pretium. Suspendisse rhoncus erat quis leo laoreet rhoncus. Aliquam quis metus vitae enim cursus sodales. In euismod tortor id odio fermentum, non pretium ipsum iaculis. Quisque consectetur elementum nisi, et posuere odio vulputate ac. Ut consequat, velit eget fermentum ultrices, ligula odio fringilla diam, sit amet accumsan elit velit tempus dolor.</p>
+<p>There is a trick, <em>target-x</em> might equal to <em>x</em>, which means if <em>x</em> appear only once, then it should not be the result.</p>
+<div class="highlight"><pre><code class="language-c++" data-lang="c++"><span class="cp">#include &lt;map&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rt</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">tmp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="n">tmp</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+                <span class="n">rt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+                <span class="n">rt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">[</span><span class="n">target</span><span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">rt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">rt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="k">return</span> <span class="n">rt</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">return</span> <span class="n">rt</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="2">2</h2>
+
+<p>Be care of the carry. The trick is while the most significant digit is 9 while carry is 1, a new entry should be added to the tail of list.</p>
+<div class="highlight"><pre><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="n">l1</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">tmp</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">len</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">l2</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">len</span> <span class="o">&amp;&amp;</span> <span class="n">tmp</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">len</span><span class="o">--</span><span class="p">;</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">len</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">swap</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">);</span>
+
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">rt</span> <span class="o">=</span> <span class="n">l1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">l2</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">+=</span> <span class="n">l2</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">+</span> <span class="n">add</span><span class="p">;</span>
+            <span class="n">add</span> <span class="o">=</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">%=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span><span class="p">(</span><span class="n">l1</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">+=</span> <span class="n">add</span><span class="p">;</span>
+            <span class="n">add</span> <span class="o">=</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">%=</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">add</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">rt</span><span class="p">;</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">tmp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">add</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">rt</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="3">3</h2>
+
+<p>let wss(w) means distinct data in substring w. A scanning algorithm can be applied to figure out wss for all windows in string <em>s</em> with given length l.</p>
+
+<p>An important insight is given a substring <em>ss</em> with length <em>l</em>, if there is no repeating datum, wss(ss) = <em>l</em>.</p>
+
+<p>Finally, using binary search to try the result, if window which has the same wss and length exist, let the length to be <em>x</em>, then the result should not less than <em>x</em>, otherwise, less than it.</p>
+<div class="highlight"><pre><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">lengthOfLongestSubstring</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">fd</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+        <span class="n">fill</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="n">bw</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">fill</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">fd</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">prev</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">prev</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="n">prev</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+                <span class="n">bw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prev</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+            <span class="p">}</span>
+            <span class="n">prev</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">bw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="n">fd</span><span class="p">[</span><span class="n">bw</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="kt">int</span> <span class="n">wss</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mid</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">bw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">wss</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">wss</span> <span class="o">!=</span> <span class="n">mid</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">fd</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">wss</span><span class="o">--</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">bw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="o">-</span><span class="n">mid</span><span class="p">)</span>
+                    <span class="n">wss</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">wss</span> <span class="o">==</span> <span class="n">mid</span><span class="p">)</span>
+                <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">high</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><strong>The algorithm showed above is a general one, for this problem, another trick can be applied to reduce the complexity: there is 26 different letter in that string.</strong></p>
 
         </div>
     </div>
@@ -233,9 +327,7 @@ respective owners:</p>
 
 <div class="pagination">
   
-  <span class="page_number ">Page: 1 of 2</span>
-  
-    <a class="btn btn-default" href="/jekyll-clean/page2" class="next">Older</a>
+  <span class="page_number ">Page: 1 of 1</span>
   
 </div>
 
@@ -246,7 +338,7 @@ respective owners:</p>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">&copy;2016 My blog. Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            <p class="copyright">&copy;2016 CC's blog. Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
             under
             <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
         </div>
